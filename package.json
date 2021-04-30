@@ -5,6 +5,12 @@
   "repository": "git@github.com:dittowords/figma-plugin-react-template.git",
   "author": "XavierAgostini <xavier.agostini@mail.mcgill.ca>",
   "license": "MIT",
+  "scripts": {
+    "build": "webpack --mode=production",
+    "build:watch": "webpack --mode=development --watch",
+    "build:preview": "webpack --mode=development --PREVIEW_ENV=figma --watch",
+    "dev": "node preview-server.js & webpack-dev-server --mode=development --PREVIEW_ENV=browser"
+  },
   "dependencies": {
     "@figma/plugin-typings": "^1.16.1",
     "@types/react": "^16.9.0",
