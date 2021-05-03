@@ -4,5 +4,5 @@ import App from './App'
 import PreviewApp from './PreviewApp'
 import './ui.css'
 
-const PREVIEW_ENV = undefined
-ReactDOM.render({PREVIEW_ENV == "undefined" ? <App /> : <PreviewApp />, document.getElementById('react-page'))
+const PREVIEW_ENV = process.env.PREVIEW_ENV
+ReactDOM.render(!PREVIEW_ENV ? <App /> : <PreviewApp />, document.getElementById('react-page'))
