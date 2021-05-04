@@ -42,10 +42,9 @@ function PreviewApp() {
         if (msg.src === "server") {
           let temp = JSON.parse(msg.message);
           window.parent.postMessage({ pluginMessage: temp }, '*')
-          // io.send(temp.event, temp.data);
         }
       } catch (err) {
-        console.log("not a valid message");
+        console.error("not a valid message", err);
       }
     };
 

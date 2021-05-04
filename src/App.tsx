@@ -1,25 +1,19 @@
 import React, { useEffect, useState } from 'react'
+import TextItem from './TextItem'
 
 declare function require(path: string): any
 
 function App() {
-
-  const [inputText, setInputText] = useState<string>('')
   const [selectedTextNodes, setSelectedTextNodes] = useState<any[]>([])
 
-  const onCreate = () => {
-    parent.postMessage({ pluginMessage: { type: 'create-text', text: inputText } }, '*')
-  }
-
-  const onCancel = () => {
-    parent.postMessage({ pluginMessage: { type: 'cancel' } }, '*')
-  }
   const onMessage = (msg) => {
-    console.log('msg', msg)
     if (msg.data.pluginMessage &&  msg.data.pluginMessage.event === 'selected-text-nodes') {
-      console.log('here',msg.data.pluginMessage.nodes)
       setSelectedTextNodes(msg.data.pluginMessage.nodes)
     }
+  }
+
+  const handleUpdateText = (figmaNodeID, updatedText) => {
+    parent.postMessage({ pluginMessage: { type: 'update-text', figmaNodeID , text: updatedText } }, '*')
   }
 
   useEffect(() => {
@@ -27,20 +21,25 @@ function App() {
     return () => window.removeEventListener('message', onMessage)
   }, [])
 
-  return <div>
-    <img src={require('./logo.svg')} />
-    <h2>Text Creator</h2>
-    <p>Text: <input value={inputText} onChange={e => setInputText(e.target.value)} /></p>
-    <button id="create" onClick={onCreate}>Create</button>
-    <button onClick={onCancel}>Cancel</button>
+  return <div className="container">
+    <div className="header">
+      <img src={require('./logo.svg')} />
+      <h2>Update Text App</h2>
+    </div>
+    
+    
     <div>
-      <h2>Selected Text</h2>
-      {selectedTextNodes.length === 0 && <div>No selected text</div>}
-      <div>
+      {selectedTextNodes.length === 0 && <div>Select some text in Figma that you wish to edit.</div>}
+      <div className="textList">
       {selectedTextNodes.map((node, index) => (
-        <div key={index}>{node.text}</div>
+        <TextItem 
+          key={index}
+          node={node}
+          handleUpdateText={handleUpdateText}
+        />
       ))}
       </div>
+      
     </div>
   </div>
   
