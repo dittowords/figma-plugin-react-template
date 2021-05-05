@@ -27,7 +27,6 @@ function App() {
       <h2>Update Text App</h2>
     </div>
     
-    
     <div>
       {selectedTextNodes.length === 0 && <div>Select some text in Figma that you wish to edit.</div>}
       <div className="textList">
@@ -39,10 +38,8 @@ function App() {
         />
       ))}
       </div>
-      
     </div>
   </div>
-  
 }
 
 export default App
