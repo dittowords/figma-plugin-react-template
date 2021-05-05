@@ -3,6 +3,7 @@ Figma Plugin template with  React, Webpack and hot reloading
 
 ## Quickstart
 
+- Run `yarn`
 - Run `yarn preview:plugin` to build the dummy Figma plugin
 - In Figma reload the plugin as you normally would, you should see the following:
 ![image](https://user-images.githubusercontent.com/7476817/117206381-a5ef5000-ada7-11eb-938e-93e59c8bae0a.png)
