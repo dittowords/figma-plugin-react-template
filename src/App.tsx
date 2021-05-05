@@ -28,7 +28,7 @@ function App() {
     </div>
     
     <div>
-      {selectedTextNodes.length === 0 && <div>Select some text in Figma that you wish to edit.</div>}
+      {selectedTextNodes.length === 0 && <div className="select-warning">Select some text in Figma that you wish to edit.</div>}
       <div className="textList">
       {selectedTextNodes.map((node, index) => (
         <TextItem 

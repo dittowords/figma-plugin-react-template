@@ -1,7 +1,15 @@
 /// <reference path="../node_modules/@figma/plugin-typings/index.d.ts" />
 
+const PREVIEW_ENV = process.env.PREVIEW_ENV
+
+
 figma.showUI(__html__);
-figma.ui.resize(400, 500);
+
+if (PREVIEW_ENV === 'figma') {
+  figma.ui.resize(300, 200);
+} else {
+  figma.ui.resize(400, 400);
+}
 
 const getSelectedNodes = () => {
   const selectedTextNodes = figma.currentPage.selection
