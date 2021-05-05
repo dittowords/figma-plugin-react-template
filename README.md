@@ -8,6 +8,8 @@ Figma Plugin template with  React, Webpack and hot reloading
 ![image](https://user-images.githubusercontent.com/7476817/117206381-a5ef5000-ada7-11eb-938e-93e59c8bae0a.png)
 - In another terminal window run `yarn preview:browser` to launch the websocket server and to open the plugin in your default web browser
 - to run the plugin normally, run `yarn build:watch`
+![image](https://user-images.githubusercontent.com/7476817/117207805-3bd7aa80-ada9-11eb-8427-a1e32709534c.png)
+![image](https://user-images.githubusercontent.com/7476817/117207942-67f32b80-ada9-11eb-8d5f-f7857d81930d.png)
 
 ## How it works
 
