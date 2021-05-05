@@ -8,8 +8,8 @@
   "scripts": {
     "build": "webpack --mode=production",
     "build:watch": "webpack --mode=development --watch",
-    "build:preview": "webpack --mode=development --PREVIEW_ENV=figma --watch",
-    "dev": "node preview-server.js & webpack-dev-server --mode=development --PREVIEW_ENV=browser"
+    "preview:plugin": "webpack --mode=development --PREVIEW_ENV=figma --watch",
+    "preview:browser": "node preview-server.js & webpack-dev-server --mode=development --PREVIEW_ENV=browser"
   },
   "dependencies": {
     "@figma/plugin-typings": "^1.19.0",
@@ -25,7 +25,7 @@
     "css-loader": "^3.1.0",
     "express": "^4.17.1",
     "fork-ts-checker-webpack-plugin": "^6.2.4",
-    "html-webpack-inline-source-plugin": "0.0.10",
+  "html-webpack-inline-source-plugin": "0.[w0.10",
     "html-webpack-plugin": "^3.2.0",
     "react-refresh": "^0.1.0",
     "react-refresh-typescript": "^1.1.0",
