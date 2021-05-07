@@ -9,7 +9,9 @@ Ever wish it was as easy to build a Figma plugin as it is to build a website? We
 
 1. `yarn`
 2. `yarn preview:plugin`
-3. In another window run `yarn preview:browser` 
+3. In Figma load your plugin by right-clicking `Plugins > Development > New Plugin`, and select the project's `manifest.json` file:
+<img src="https://user-images.githubusercontent.com/7476817/117482170-da364e00-af18-11eb-87ad-479d63c4ea7c.png" width="600"><img src="https://user-images.githubusercontent.com/7476817/117482189-df939880-af18-11eb-87ea-9fd11738b8f5.png" width="600">
+4. In another window run `yarn preview:browser` 
 
 4. To run the React app inside of Figma, run `yarn build:watch`
 
