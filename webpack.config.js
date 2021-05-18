@@ -25,13 +25,6 @@ module.exports = (env, argv) => ({
     hot: true,
     inline: true,
     historyApiFallback: true,
-    proxy: {
-      '/': {
-        target: 'http://localhost:3000',
-        secure: false,
-        changeOrigin: true
-      }
-    },
     port: 9000,
   },
 
