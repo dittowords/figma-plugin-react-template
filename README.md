@@ -6,7 +6,7 @@ Ever wish it was as easy to build a Figma plugin as it is to build a website? We
 ![Screen Recording 2021-05-05 at 03 46 11 PM](https://user-images.githubusercontent.com/7476817/117219079-5c0f6580-adb9-11eb-9cfd-6e803d93e3ca.gif)
 ![Screen Recording 2021-05-05 at 03 45 16 PM](https://user-images.githubusercontent.com/7476817/117219001-32563e80-adb9-11eb-839d-d8cde22e5dd1.gif)
 
-**Note:** there's a newer version of this template with tailwindcss, live-reloading, and messaging by [@rlingineni](https://github.com/rlingineni/figma-plugin-react-template)
+**Note:** there's a [newer version](https://github.com/rlingineni/figma-plugin-react-template) of this template with tailwindcss, live-reloading, and messaging by @rlingineni
 
 ## Quickstart
 
